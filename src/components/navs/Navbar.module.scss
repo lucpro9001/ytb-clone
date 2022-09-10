@@ -1,0 +1,12 @@
+.wrapper {
+    width: var(--nav-width);
+}
+
+.hidden {
+    display: none;
+}
+
+.fixed {
+    position: fixed;
+    overflow: hidden;
+}
