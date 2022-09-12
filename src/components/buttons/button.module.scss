@@ -1,0 +1,47 @@
+
+.btn {
+    cursor: pointer;
+    outline: none;
+    border: 1px solid var(--button-border);
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+}
+.btn-round {
+    border-radius: 16px;
+}
+.btn-small {
+    padding: 5.5px 13px;
+    font-size: 14px;
+}
+
+.btn-medium {
+    padding: 5.5px 19px;
+    font-size: 14px;
+}
+.btn-large {
+    // padding: ;
+    font-size: 16px;
+}
+// background
+.primary {
+    background-color: var(--primary);
+}
+.secondary {
+    background-color: var(--secondary);
+}
+.white {
+    background-color: var(--white);
+}
+
+// text
+
+.text-primary {
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.text-secondary {
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+}

@@ -1,0 +1,16 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.mic {
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+    justify-content: center;
+    background-color: var(--gray2);
+    flex: 0 0 40px;
+}

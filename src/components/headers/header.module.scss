@@ -1,0 +1,35 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    height: var(--header-height);
+    max-height: var(--header-height);
+    padding: 0 16px;
+    justify-content: space-between;
+}
+.header {
+    flex: 0 0 175px;
+}
+
+.login {
+    flex: 0 0 145px;
+}
+
+.search {
+    flex: 0 1 630px;
+}
+
+.cate {
+    padding: 8px;
+    cursor: pointer;
+}
+.logo {
+    padding: 21px 14px 18px 16px;
+}
+
+.country_code {
+    font-size: 10px;
+    color: var(--text-secondary);
+    position: relative;
+    top: -16px;
+    right: -4px;
+}

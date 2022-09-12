@@ -1,9 +1,16 @@
 :root {
     --primary: #f00;
+    --secondary: #065fd4;
     --black: #030303;
     --gray: #7c7c7c;
+    --gray2: #f9f9f9;
     --white: #ffffff;
+    --text-color: #111111;
+    --text-secondary: #606060;
+    --button-border: #ccc;
     --nav-width: 72px;
+    --header-height: 56px;
+    --shadow: #eee;
 }
 
 * {
@@ -16,3 +23,34 @@ a {
     color: var(--black);
     text-decoration: none;
 }
+
+// position layout
+.d-flex {
+    display: flex;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
+
+// text color below 
+
+.text-black {
+    color: var(--black);
+}
+
+
+// font weight
+
+@for $weight from 1 through 9 {
+    .font-weight-#{$weight} {
+        font-weight: calc($weight * 100);
+    }
+}
+
+// cursor 
+.cursor-pointer {
+    cursor: pointer;
+}
+
+
+
