@@ -8,6 +8,7 @@ function Button({children, ...props}) {
         primary: props.primary,
         secondary: props.secondary,
         white: props.white,
+        gray: props.gray,
         'text-primary': props.primary && props.outline,
         'text-secondary': props.secondary && props.outline,
         outline: props.outline,

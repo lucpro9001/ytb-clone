@@ -11,7 +11,7 @@ function Search(props) {
     return (
         <div className={cx('wrapper')}>
             <Input placehoder='Tìm kiếm'/>
-            <Button medium><img src={images.search} alt='search'/></Button>
+            <Button grey medium><img src={images.search} alt='search'/></Button>
             <div className={cx('cursor-pointer', cx('mic'))}><img src={images.mic} alt='mic'/></div>
         </div>
     );
