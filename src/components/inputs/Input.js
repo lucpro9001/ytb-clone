@@ -8,18 +8,12 @@ const cx = classNames.bind(styles);
 
 function Input(props) {
   const [input, setInput] = useState("");
-  const [closeState, setCloseState] = useState(false);
   const ref = useRef(null);
   const classes_input = cx("input");
 
   function handleInput(e) {
     const searchString = e.target.value;
     setInput(searchString);
-    if(searchString.length > 0) {
-        setCloseState(true);
-    } else {
-        setCloseState(false);
-    }
   }
 
   const handleSearchClick = () => {
@@ -27,7 +21,6 @@ function Input(props) {
   };
   const handleCloseClick = () => {
     setInput("");
-    setCloseState(false);
     ref.current.focus();
   };
 
@@ -49,7 +42,7 @@ function Input(props) {
       <img
         src={images.close}
         alt="close"
-        className={cx("cursor-pointer", { close: closeState })}
+        className={cx("cursor-pointer", { close: input.length > 0 })}
         onClick={handleCloseClick}
       />
     </div>
