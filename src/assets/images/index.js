@@ -5,6 +5,7 @@ const images = {
     'sm-search': require('./sm-search.svg').default,
     user: require('./user.svg').default,
     mic: require('./mic.svg').default,
+    close: require('./close.svg').default,
 };
 
 export default images;

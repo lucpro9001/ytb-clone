@@ -26,15 +26,27 @@
 // background
 .primary {
     background-color: var(--primary);
+    &:hover {
+        
+    }
 }
 .secondary {
     background-color: var(--secondary);
+    &:hover {
+        
+    }
 }
 .white {
     background-color: var(--white);
+    &:hover {
+        
+    }
 }
 .gray {
     background-color: var(--gray);
+    &:hover {
+        background-color: var(--gray-hover);
+    }
 }
 // text
 
