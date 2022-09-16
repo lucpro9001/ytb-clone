@@ -6,7 +6,7 @@ function HeaderOnlyLayout({ children }) {
     return (
         <>
             <Header />
-            <Navbar pos={'hidden'}/>
+            <Navbar hidden/>
             <div className={style.content}>
                 {children}
             </div>

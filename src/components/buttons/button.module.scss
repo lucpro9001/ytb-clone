@@ -7,7 +7,14 @@
     align-items: center;
     border-radius: 2px;
 }
-.btn-round {
+
+.active {
+    color: white;
+    background-color: var(--black);
+    border: var(--black);
+}
+
+.rounded {
     border-radius: 16px;
 }
 .btn-small {

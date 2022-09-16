@@ -1,5 +1,11 @@
+.wrapper {
+    height: calc(100% - var(--header-height));
+    position: absolute;
+    bottom: 0;
+}
+
 .content {
-    width: calc(100vw - var(--nav-width));
+    width: calc(100% - var(--nav-width));
     float: right;
-    background-color: gray;
+    border-top: 1px solid var(--border-line);
 }

@@ -12,6 +12,8 @@
     --nav-width: 72px;
     --header-height: 56px;
     --shadow: #eee;
+    --border-line: #0000001a;
+    --tippy-color: #616161;
 }
 
 * {
@@ -32,6 +34,10 @@ a {
 .justify-content-between {
     justify-content: space-between;
 }
+.justify-content-center {
+    justify-content: center;
+}
+
 
 // text color below 
 
@@ -52,6 +58,41 @@ a {
 .cursor-pointer {
     cursor: pointer;
 }
+
+
+// components
+.box {
+    width: 100%;
+    background-color: white;
+    z-index: 999;
+}
+
+
+// tippy 
+
+.my-box {
+    border-top: 0;
+    width: 100%;
+    background-color: var(--white);
+    border: 1px solid var(--button-border);
+    border-top: 0;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
+    cursor: default;
+    padding: 8px 4px;
+    margin-top: -10px;
+}
+.tippy-arrow {
+    display: none;
+}
+.tippy-box {
+    background-color: var(--tippy-color);
+    padding: 2px;
+    border-radius: 2px;
+}
+
+
+
+
 
 
 

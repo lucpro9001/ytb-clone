@@ -13,4 +13,7 @@
     justify-content: center;
     background-color: var(--gray2);
     flex: 0 0 40px;
+    &:hover {
+        background-color: var(--border-line);
+    }
 }
