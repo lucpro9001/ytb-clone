@@ -13,7 +13,8 @@ function Input(props) {
   const [searchResult, setSearchResult] = useState([1, 2]);
   const [showResult, setshowResult] = useState(false);
 
-  const ref = useRef(null);
+  const input_ref = useRef(null);
+  const wrapper_ref = useRef(null);
   const classes_input = cx("input");
 
   function handleInput(e) {
@@ -22,34 +23,30 @@ function Input(props) {
   }
 
   const handleSearchClick = () => {
-    ref.current.focus();
+    input_ref.current.focus();
   };
   const handleCloseClick = () => {
     setInput("");
-    ref.current.focus();
+    input_ref.current.focus();
   };
 
   const handleClickOutSide = () => {
     setshowResult(false);
   };
-  useEffect(() => {
-    setWidth(ref.current.offsetWidth - 13);
-  }, []);
+
+  function handleResizeWindow() {
+    setWidth(wrapper_ref.current.offsetWidth);
+  }
 
   useEffect(() => {
-    function handleResizeWindow() {
-      setWidth(ref.current.offsetWidth + 12);
-    }
+    setWidth(wrapper_ref.current.offsetWidth);
     window.addEventListener("resize", handleResizeWindow)
     return () => window.removeEventListener("resize", handleResizeWindow);
-  }, [width]);
-
-  
+  }, []);
 
   return (
     <>
       <Tippy
-        maxWidth={width}
         interactive
         onClickOutside={handleClickOutSide}
         visible={showResult && searchResult.length > 0}
@@ -62,7 +59,7 @@ function Input(props) {
         )}
         
       >
-        <div className={cx("wrapper")}>
+        <div ref={wrapper_ref} className={cx("wrapper")}>
           <img
             className={cx("search")}
             onClick={handleSearchClick}
@@ -71,7 +68,7 @@ function Input(props) {
           />
 
           <input
-            ref={ref}
+            ref={input_ref}
             placeholder={props.placehoder}
             className={classes_input}
             value={input}

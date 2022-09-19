@@ -8,12 +8,6 @@
     border-radius: 2px;
 }
 
-.active {
-    color: white;
-    background-color: var(--black);
-    border: var(--black);
-}
-
 .rounded {
     border-radius: 16px;
 }
@@ -53,6 +47,11 @@
     background-color: var(--gray);
     &:hover {
         background-color: var(--gray-hover);
+    }
+    &.active {
+        background-color: var(--black);
+        color: var(--white);
+        border: var(--black);
     }
 }
 // text

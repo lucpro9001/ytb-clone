@@ -11,6 +11,7 @@ const images = {
   trend: require("./trend.svg").default,
   libary: require("./libary.svg").default,
   short: require("./short.svg").default,
+  menu: require("./menu.svg").default,
 };
 
 export default images;

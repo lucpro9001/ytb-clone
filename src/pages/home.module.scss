@@ -1,9 +1,24 @@
 
+.suggestion {
+  border-top: 1px solid var(--border-line);
+  border-bottom: 1px solid var(--border-line);
+  height: 60px;
+  background-color: var(--white);
+  position: fixed;
+  width: 95%;
+  overflow: hidden;
+}
 
 .tab {
-    margin: 12px 12px 12px 0;
-    border: 1px solid transparent;
-    & * {
-        padding: 8px 12px;
-    }
+  margin: 12px 12px 12px 0;
+  border: 1px solid transparent;
+  & * {
+    padding: 8px 12px;
+  }
+}
+
+.content {
+  padding: 24px 16px;
+  margin-top: var(--header-height);
+
 }

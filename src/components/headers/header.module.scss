@@ -11,11 +11,16 @@
     justify-content: space-between;
 }
 .header {
-    flex: 0 0 175px;
+    flex: 0 0 255px;
 }
 
 .login {
-    flex: 0 0 145px;
+    flex: 0 0 225px;
+    padding-left: 42px;
+    align-items: center;
+    .menu {
+        padding: 8px;
+    }
 }
 
 .search {

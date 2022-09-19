@@ -5,16 +5,8 @@ const cx = classNames.bind(styles);
 
 function Button({children, ...props}) {
     const classes = cx('btn', {
-        primary: props.primary,
-        secondary: props.secondary,
-        white: props.white,
-        gray: props.gray,
         'text-primary': props.primary && props.outline,
         'text-secondary': props.secondary && props.outline,
-        outline: props.outline,
-        text: props.text,
-        disabled: props.disabled,
-        rounded: props.rounded,
         'btn-small': props.small,
         'btn-medium': props.medium,
         'btn-large': props.large,

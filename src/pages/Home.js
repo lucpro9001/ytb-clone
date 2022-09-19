@@ -6,31 +6,28 @@ import styles from "./home.module.scss";
 const cx = classNames.bind(styles);
 
 function Home() {
-    let arr = [];
-    for(let i = 0; i < 9999; i++) {
-        arr.push('<br />')       
-    }
+  let arr = [];
+  for (let i = 0; i < 9999; i++) {
+    arr.push("<br />");
+  }
   return (
-    <div>
-      <div className="d-flex justify-content-center">
-        <div className={cx("tab")}>
-          <Button rounded small active>
-            Peniz
-          </Button>
-        </div>
-        <div className={cx("tab")}>
-          <Button rounded small>
-            Penizizabezt
-          </Button>
-        </div>
-        <div className={cx("tab")}>
-          <Button rounded small>
-            Peniz
-          </Button>
+    <>
+      <div className={cx("suggestion")}>
+        <div className="d-flex justify-content-center">
+          <div className={cx("tab")}>
+            <Button gray rounded small active>
+              Peniz
+            </Button>
+          </div>
+          <div className={cx("tab")}>
+            <Button gray rounded small>
+              Penizizabezt
+            </Button>
+          </div>
         </div>
       </div>
-      {arr}
-    </div>
+      <div className={cx("content")}>{arr}</div>
+    </>
   );
 }
 

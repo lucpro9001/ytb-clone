@@ -1,98 +1,98 @@
 :root {
-    --primary: #f00;
-    --secondary: #065fd4;
-    --black: #030303;
-    --gray: #f8f8f8;
-    --gray-hover: #f0f0f0;
-    --gray2: #f9f9f9;
-    --white: #ffffff;
-    --text-color: #111111;
-    --text-secondary: #606060;
-    --button-border: #ccc;
-    --nav-width: 72px;
-    --header-height: 56px;
-    --shadow: #eee;
-    --border-line: #0000001a;
-    --tippy-color: #616161;
+  --primary: #f00;
+  --secondary: #065fd4;
+  --black: #030303;
+  --gray: #f8f8f8;
+  --gray-hover: #f0f0f0;
+  --gray2: #f9f9f9;
+  --white: #ffffff;
+  --text-color: #111111;
+  --text-secondary: #606060;
+  --button-border: #ccc;
+  --nav-width: 72px;
+  --header-height: 56px;
+  --shadow: #eee;
+  --border-line: #0000001a;
+  --tippy-color: #616161;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 a {
-    color: var(--black);
-    text-decoration: none;
+  color: var(--black);
+  text-decoration: none;
 }
 
 // position layout
 .d-flex {
-    display: flex;
+  display: flex;
 }
 .justify-content-between {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 .justify-content-center {
-    justify-content: center;
+  justify-content: center;
+}
+.fixed {
+  position: fixed;
 }
 
-
-// text color below 
+// text color below
 
 .text-black {
-    color: var(--black);
+  color: var(--black);
 }
-
 
 // font weight
 
 @for $weight from 1 through 9 {
-    .font-weight-#{$weight} {
-        font-weight: calc($weight * 100);
-    }
+  .font-weight-#{$weight} {
+    font-weight: calc($weight * 100);
+  }
 }
 
-// cursor 
+// cursor
 .cursor-pointer {
-    cursor: pointer;
+  cursor: pointer;
 }
-
 
 // components
 .box {
-    width: 100%;
-    background-color: white;
-    z-index: 999;
+  width: 100%;
+  background-color: white;
+  z-index: 999;
 }
 
-
-// tippy 
+// tippy
 
 .my-box {
-    border-top: 0;
-    width: 100%;
-    background-color: var(--white);
-    border: 1px solid var(--button-border);
-    border-top: 0;
-    box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
-    cursor: default;
-    padding: 8px 4px;
-    margin-top: -10px;
+  border-top: 0;
+  width: 100%;
+  background-color: var(--white);
+  border: 1px solid var(--button-border);
+  border-top: 0;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
+  cursor: default;
+  padding: 8px 4px;
+  margin-top: -10px;
 }
 .tippy-arrow {
-    display: none;
+  display: none;
 }
 .tippy-box {
-    background-color: var(--tippy-color);
-    padding: 2px;
-    border-radius: 2px;
+  background-color: var(--tippy-color);
+  padding: 2px;
+  border-radius: 2px;
 }
 
-
-
-
-
-
-
+// width
+$lenght: 10;
+@for $size from 1 through $lenght {
+  .w-#{calc($size*10)} {
+    width: percentage(calc($size/10));
+  }
+}
