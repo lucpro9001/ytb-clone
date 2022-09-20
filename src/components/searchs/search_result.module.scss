@@ -1,0 +1,14 @@
+.wrapper {
+    font-size: 16px;
+    height: 32px;
+    align-items: center;
+    padding: 0 24px 0 10px;
+    transition: .15s;
+    img {
+        margin-right: 10px;
+    }
+    &:hover {
+        background-color: var(--shadow);
+    }
+}
+

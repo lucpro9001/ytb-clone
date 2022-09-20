@@ -12,6 +12,17 @@ const images = {
   libary: require("./libary.svg").default,
   short: require("./short.svg").default,
   menu: require("./menu.svg").default,
+  "search-history": require("./search-history.svg").default,
+  next: require("./next.svg").default,
+  "user-shield": require("./user-shield.svg").default,
+  moon: require("./moon.svg").default,
+  translate: require("./translate.svg").default,
+  feedback: require("./feedback.svg").default,
+  global: require("./global.svg").default,
+  keyboard: require("./keyboard.svg").default,
+  setting: require("./setting.svg").default,
+  shield: require("./shield.svg").default,
+  question: require("./question.svg").default,
 };
 
 export default images;

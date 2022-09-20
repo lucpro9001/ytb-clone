@@ -4,7 +4,7 @@ import classNames from "classnames/bind";
 
 import images from "../../assets/images";
 import Button from "../buttons/Button";
-import Input from "../inputs/Input";
+import Input from "./SearchInput";
 import styles from "./search.module.scss";
 
 const cx = classNames.bind(styles);

@@ -2,8 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import classNames from "classnames/bind";
 import Tippy from "@tippyjs/react/headless";
 
-import styles from "./input.module.scss";
+import styles from "./search_input.module.scss";
 import images from "../../assets/images";
+import SearchResult from "./SearchResult";
 
 const cx = classNames.bind(styles);
 
@@ -39,7 +40,8 @@ function Input(props) {
   }
 
   useEffect(() => {
-    setWidth(wrapper_ref.current.offsetWidth);
+    setWidth(wrapper_ref.current.offsetWidth - 24);
+    
     window.addEventListener("resize", handleResizeWindow)
     return () => window.removeEventListener("resize", handleResizeWindow);
   }, []);
@@ -51,11 +53,11 @@ function Input(props) {
         onClickOutside={handleClickOutSide}
         visible={showResult && searchResult.length > 0}
         render={(attrs) => (
-          <div className={"my-box"} tabIndex="-1" {...attrs} style={{width: width}}>
+          <ul className={"my-box"} tabIndex="-1" {...attrs} style={{width: width}}>
             {searchResult.map((e, i) => {
-              return <h1 key={i}>{e}</h1>;
+              return <li key={i}><SearchResult content={e}/></li>
             })}
-          </div>
+          </ul>
         )}
         
       >
