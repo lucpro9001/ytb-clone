@@ -5,12 +5,14 @@ import { useState } from "react";
 import images from "../../assets/images";
 import NavItem from "../navs/NavItem";
 import Divider from "./Divider";
-import styles from "./menu.module.scss";
+import MenuHeader from "./Header";
+import styles from "./scss/menu.module.scss";
 
 const cx = classNames.bind(styles);
 
-function Menu({ children, props }) {
+function Menu({ children, item = [], props }) {
   const [showMenu, setShowMenu] = useState(false);
+
   const handleClickMenu = () => {
     setShowMenu(true);
   };

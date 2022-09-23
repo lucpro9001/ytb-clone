@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import classNames from "classnames/bind";
 import Tippy from "@tippyjs/react/headless";
 
-import styles from "./search_input.module.scss";
+import styles from "./scss/search_input.module.scss";
 import images from "../../assets/images";
 import SearchResult from "./SearchResult";
 

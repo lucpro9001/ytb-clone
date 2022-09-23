@@ -3,22 +3,18 @@ import "tippy.js/dist/tippy.css";
 import classNames from "classnames/bind";
 
 import images from "../../assets/images";
-import Button from "../buttons/Button";
-import Input from "./SearchInput";
 import styles from "./scss/search.module.scss";
 
 const cx = classNames.bind(styles);
-
-function Search(props) {
+function SearchIcon() {
   return (
-    <div className={cx("wrapper")}>
-      <Input placehoder="Tìm kiếm" />
+    <div className={cx("search")}>
       <Tippy content={"Tìm kiếm"}>
-        <span>
-          <Button gray medium>
-            <img src={images.search} alt="search" />
-          </Button>
-        </span>
+        <img
+          className={cx("cursor-pointer")}
+          src={images.search}
+          alt="search"
+        />
       </Tippy>
       <Tippy content={"Tìm kiếm bằng giọng nói"} interactive>
         <div className={cx("cursor-pointer", cx("mic"))}>
@@ -28,5 +24,3 @@ function Search(props) {
     </div>
   );
 }
-
-export default Search;

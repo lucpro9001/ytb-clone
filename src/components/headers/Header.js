@@ -9,8 +9,18 @@ import Button from "../buttons/Button";
 import styles from "./header.module.scss";
 import Search from "../searchs/Search";
 import Menu from "../menus/Menu";
+import NavItem from "../navs/NavItem";
+import Divider from "../menus/Divider";
 
 const cx = classNames.bind(styles);
+
+const menuItems = [
+  { 
+    component: {
+      type: NavItem
+    }
+  },
+];
 
 function Header(props) {
   return (
@@ -30,7 +40,7 @@ function Header(props) {
       </div>
 
       <div className={cx("font-weight-5", "d-flex", "login")}>
-        <Menu>
+        <Menu data={[]}>
           <>
             <Tippy content={"Cài đặt"} interactive>
               <img

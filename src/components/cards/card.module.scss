@@ -1,0 +1,47 @@
+.wrapper {
+  margin: 5px;
+  max-width: 320px;
+  min-width: 240px;
+  .thumpnail {
+    width: 100%;
+  }
+  .detail {
+    margin-top: 12px;
+    display: flex;
+    .avatar {
+      margin-right: 12px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+    }
+    .detail-center {
+      flex: 1;
+      .title {
+        max-height: 40px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        font-size: 15px;
+        font-weight: 600;
+        color: #1e1e1e;
+        line-height: 20px;
+      }
+      .chanel-name, .view {
+        color: var(--text-secondary);
+        font-size: 13px;
+        overflow: hidden;
+      }
+    }
+    .menu {
+      height: 24px;
+      margin-left: 5px;
+      visibility: hidden;
+    }
+  }
+
+  &:hover {
+    .menu {
+      visibility: visible;
+    }
+  }
+}

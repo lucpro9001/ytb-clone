@@ -1,12 +1,16 @@
-
+.center {
+  width: 100%;
+}
 .suggestion {
   border-top: 1px solid var(--border-line);
   border-bottom: 1px solid var(--border-line);
   height: 60px;
   background-color: var(--white);
   position: fixed;
-  width: 95%;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .tab {
@@ -18,7 +22,10 @@
 }
 
 .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 24px 16px;
   margin-top: var(--header-height);
-
 }
+

@@ -2,7 +2,7 @@ import classNames from "classnames/bind";
 import { Link } from "react-router-dom";
 
 import images from "../../assets/images";
-import styles from "./Navbar.module.scss";
+import styles from "./scss/navbar.module.scss";
 import routes from "../../configs/routes";
 import Icon from "./Icon";
 

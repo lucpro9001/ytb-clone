@@ -9,7 +9,7 @@ const images = {
   home: require("./home.svg").default,
   "home-active": require("./home-active.svg").default,
   trend: require("./trend.svg").default,
-  libary: require("./libary.svg").default,
+  subcriber: require("./subcriber.svg").default,
   short: require("./short.svg").default,
   menu: require("./menu.svg").default,
   "search-history": require("./search-history.svg").default,
@@ -23,6 +23,14 @@ const images = {
   setting: require("./setting.svg").default,
   shield: require("./shield.svg").default,
   question: require("./question.svg").default,
+  "left-arrow": require("./left-arrow.svg").default,
+  tick: require("./tick.svg").default,
+  libary: require("./libary.svg").default,
+  history: require("./history.svg").default,
+  "play-red": require("./play-red.svg").default,
+  "play-rec-red": require("./play-rec-red.svg").default,
+  "tivi-red": require("./tivi-red.svg").default,
+  flag: require("./flag.svg").default,
 };
 
 export default images;

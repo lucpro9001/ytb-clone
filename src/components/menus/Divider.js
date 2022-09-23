@@ -1,6 +1,6 @@
 import classNames from "classnames/bind";
 
-import styles from "./divider.module.scss";
+import styles from "./scss/divider.module.scss";
 
 const cx = classNames.bind(styles);
 function Divider(props) {

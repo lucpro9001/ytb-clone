@@ -2,7 +2,7 @@ import classNames from "classnames/bind";
 
 
 import images from "../../assets/images";
-import styles from "./search_result.module.scss";
+import styles from "./scss/search_result.module.scss";
 
 const cx = classNames.bind(styles);
 
