@@ -11,7 +11,12 @@ const cx = classNames.bind(styles);
 
 function Search(props) {
   return (
-    <div className={cx("wrapper")}>
+    <>
+      <div className={cx("search-icon")}>
+        <img className={cx("icon")} src={images.search} alt="search" />
+        <img className={cx("icon")} src={images.mic} alt="mic" />
+      </div>
+      <div className={cx("wrapper")}>
       <Input placehoder="Tìm kiếm" />
       <Tippy content={"Tìm kiếm"}>
         <span>
@@ -26,6 +31,7 @@ function Search(props) {
         </div>
       </Tippy>
     </div>
+    </>
   );
 }
 

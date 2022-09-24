@@ -16,10 +16,8 @@ function DefaultLayout({ children }) {
       <Header />
       <div className={cx("wrapper")}>
         {showNav || <Navbar fixed />}
-        <div className="d-flex">
-          {showNav ? <NavbarFull /> : <div className={cx("blank")} />}
-          <div className={cx("content")}>{children}</div>
-        </div>
+        {showNav && <NavbarFull />}
+          <div className={cx("content", {showNav})}>{children}</div>
       </div>
     </>
   );

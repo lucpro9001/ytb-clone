@@ -10,12 +10,14 @@
   --text-secondary: #606060;
   --button-border: #ccc;
   --nav-width: 72px;
+  --navfull-width: 240px;
   --header-height: 56px;
   --shadow: #eee;
   --border-line: #0000001a;
   --tippy-color: #616161;
   --menu-hover: #f2f2f2;
   --back-hover: #6e6e6e;
+
 }
 
 * {
@@ -24,7 +26,10 @@
   box-sizing: border-box;
   font-family: Roboto, Arial, sans-serif;
 }
-body { margin: 0; }
+
+body {
+  margin: 0; 
+}
 a {
   color: var(--black);
   text-decoration: none;

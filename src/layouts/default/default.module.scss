@@ -3,12 +3,18 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+
 }
 
 .content {
-    width: 100%;
-    float: right;
+    margin-left: var(--nav-width);
 }
-.blank {
-    width: var(--nav-width);
+.showNav {
+    margin-left: var(--navfull-width);
 }
+
+@media only screen and (max-width: 700px) {
+    .content, .showNav {
+        margin-left: 0;
+    }
+  }
