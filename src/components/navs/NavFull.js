@@ -9,7 +9,6 @@ import Button from "../buttons/Button";
 
 const cx = classNames.bind(styles);
 function NavbarFull(props) {
-  console.log(images.music);
   return (
     <div className={cx("wrapper")}>
       <NavItem title="Trang chủ" icon={images["home-active"]} />

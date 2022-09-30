@@ -6,7 +6,7 @@ import styles from "./scss/search_input.module.scss";
 import images from "../../assets/images";
 import SearchResult from "./SearchResult";
 import useDebounce from "../../hooks/useDebounce";
-
+import { useStore } from "../../store";
 const cx = classNames.bind(styles);
 
 function Input(props) {
@@ -14,6 +14,9 @@ function Input(props) {
   const [width, setWidth] = useState(0);
   const [searchResult, setSearchResult] = useState([]);
   const [showResult, setshowResult] = useState(false);
+
+  const [state, dispatch] = useStore();
+  const {darkMode} = state;
 
   const input_ref = useRef(null);
   const wrapper_ref = useRef(null);
@@ -74,11 +77,13 @@ function Input(props) {
         )}
         
       >
-        <div ref={wrapper_ref} className={cx("wrapper", "dark")}>
+        <div ref={wrapper_ref} className={cx("wrapper", {
+          dark: darkMode
+        })}>
           <img
             className={cx("search")}
             onClick={handleSearchClick}
-            src={images["sm-search-dark"]}
+            src={darkMode ? images["sm-search-dark"] : images["sm-search"]}
             alt="search"
           />
 
@@ -92,7 +97,7 @@ function Input(props) {
           />
 
           <img
-            src={images.close}
+            src={darkMode ? images["close-dark"] :images.close }
             alt="close"
             className={cx("cursor-pointer", { close: input.length > 0 })}
             onClick={handleCloseClick}

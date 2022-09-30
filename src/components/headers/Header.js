@@ -11,11 +11,12 @@ import Search from "../searchs/Search";
 import Menu from "../menus/Menu";
 import NavItem from "../navs/NavItem";
 import Divider from "../menus/Divider";
+import { actions, useStore } from "../../store";
 
 const cx = classNames.bind(styles);
 
 const menuItems = [
-  // { 
+  // {
   //   component: {
   //     type: NavItem
   //   }
@@ -23,13 +24,20 @@ const menuItems = [
 ];
 
 function Header(props) {
+  const [state, dispatch] = useStore();
+  const {darkMode} = state;
+  function handleNav() {
+    dispatch(actions.setToggleNav())
+  }
   return (
-    <div className={cx("wrapper", "dark")}>
+    <div className={cx("wrapper", {
+      dark: darkMode
+    })}>
       <div className={cx("d-flex", "header")}>
-        <img src={images["nav-dark"]} alt="cate" className={styles.cate} />
+        <img onClick={handleNav} src={darkMode ? images["nav-dark"] : images.nav } alt="cate" className={styles.cate} />
         <div className={styles.logo}>
           <Link to={routes.home}>
-            <img src={images["logo-dark"]} alt="logo" />
+            <img src={darkMode ? images["logo-dark"] : images.logo } alt="logo" />
           </Link>
           <span className={styles.country_code}>VN</span>
         </div>
@@ -45,13 +53,13 @@ function Header(props) {
             <Tippy content={"Cài đặt"} interactive>
               <img
                 className={cx("menu", "cursor-pointer")}
-                src={images["menu-dark"]}
+                src={darkMode ? images["menu-dark"] : images.menu }
                 alt="menu"
               />
             </Tippy>
           </>
         </Menu>
-        <Button dark secondary outline small>
+        <Button gray={!darkMode} dark={darkMode} secondary outline small>
           <img src={images.user} alt="user" />
           <div>&nbsp; ĐĂNG NHẬP</div>
         </Button>
