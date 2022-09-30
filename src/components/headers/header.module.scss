@@ -10,6 +10,11 @@
   padding: 0 16px;
   justify-content: space-between;
 }
+
+.dark {
+  background-color: var(--bg-dark);
+}
+
 .header {
   flex: 0 0 255px;
 }

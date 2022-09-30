@@ -15,21 +15,21 @@ import Divider from "../menus/Divider";
 const cx = classNames.bind(styles);
 
 const menuItems = [
-  { 
-    component: {
-      type: NavItem
-    }
-  },
+  // { 
+  //   component: {
+  //     type: NavItem
+  //   }
+  // },
 ];
 
 function Header(props) {
   return (
-    <div className={cx("wrapper")}>
+    <div className={cx("wrapper", "dark")}>
       <div className={cx("d-flex", "header")}>
-        <img src={images.nav} alt="cate" className={styles.cate} />
+        <img src={images["nav-dark"]} alt="cate" className={styles.cate} />
         <div className={styles.logo}>
           <Link to={routes.home}>
-            <img src={images.logo} alt="logo" />
+            <img src={images["logo-dark"]} alt="logo" />
           </Link>
           <span className={styles.country_code}>VN</span>
         </div>
@@ -45,13 +45,13 @@ function Header(props) {
             <Tippy content={"Cài đặt"} interactive>
               <img
                 className={cx("menu", "cursor-pointer")}
-                src={images.menu}
+                src={images["menu-dark"]}
                 alt="menu"
               />
             </Tippy>
           </>
         </Menu>
-        <Button white secondary outline small>
+        <Button dark secondary outline small>
           <img src={images.user} alt="user" />
           <div>&nbsp; ĐĂNG NHẬP</div>
         </Button>

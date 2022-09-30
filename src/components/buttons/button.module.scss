@@ -54,6 +54,13 @@
         border: var(--black);
     }
 }
+.dark {
+    background-color: var(--bg-dark);
+    &:hover {
+        background-color: var(--dark-hover);
+    }
+    border: 1px solid var(--dark-border);
+}
 // text
 
 .text-primary {

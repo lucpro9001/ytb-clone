@@ -20,13 +20,13 @@ function Search(props) {
       <Input placehoder="Tìm kiếm" />
       <Tippy content={"Tìm kiếm"}>
         <span>
-          <Button gray medium>
+          <Button dark medium>
             <img src={images.search} alt="search" />
           </Button>
         </span>
       </Tippy>
       <Tippy content={"Tìm kiếm bằng giọng nói"} interactive>
-        <div className={cx("cursor-pointer", cx("mic"))}>
+        <div className={cx("cursor-pointer", cx("mic", "dark"))}>
           <img src={images.mic} alt="mic" />
         </div>
       </Tippy>

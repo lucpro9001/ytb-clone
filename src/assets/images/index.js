@@ -1,8 +1,12 @@
 const images = {
   nav: require("./nav.svg").default,
+  "nav-dark": require("./nav-dark.svg").default,
   logo: require("./logo.svg").default,
+  "logo-dark": require("./logo-dark.svg").default,
   search: require("./search.svg").default,
+  "search-dark": require("./search-dark.svg").default,
   "sm-search": require("./sm-search.svg").default,
+  "sm-search-dark": require("./sm-search-dark.svg").default,
   user: require("./user.svg").default,
   mic: require("./mic.svg").default,
   close: require("./close.svg").default,
@@ -12,6 +16,7 @@ const images = {
   subcriber: require("./subcriber.svg").default,
   short: require("./short.svg").default,
   menu: require("./menu.svg").default,
+  "menu-dark": require("./menu-dark.svg").default,
   "search-history": require("./search-history.svg").default,
   next: require("./next.svg").default,
   "user-shield": require("./user-shield.svg").default,
@@ -31,6 +36,11 @@ const images = {
   "play-rec-red": require("./play-rec-red.svg").default,
   "tivi-red": require("./tivi-red.svg").default,
   flag: require("./flag.svg").default,
+  music: require("./music.jpg"),
+  game: require("./game.jpg"),
+  sport: require("./sport.jpg"),
+  new: require("./new.jpg"),
+  video: require("./new.jpg"),
 };
 
 export default images;

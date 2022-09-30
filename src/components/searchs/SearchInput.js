@@ -5,17 +5,22 @@ import Tippy from "@tippyjs/react/headless";
 import styles from "./scss/search_input.module.scss";
 import images from "../../assets/images";
 import SearchResult from "./SearchResult";
+import useDebounce from "../../hooks/useDebounce";
 
 const cx = classNames.bind(styles);
 
 function Input(props) {
   const [input, setInput] = useState("");
   const [width, setWidth] = useState(0);
-  const [searchResult, setSearchResult] = useState([1, 2]);
+  const [searchResult, setSearchResult] = useState([]);
   const [showResult, setshowResult] = useState(false);
 
   const input_ref = useRef(null);
   const wrapper_ref = useRef(null);
+
+
+  const debouncedValue = useDebounce(input, 500);
+
   const classes_input = cx("input");
 
   function handleInput(e) {
@@ -28,6 +33,7 @@ function Input(props) {
   };
   const handleCloseClick = () => {
     setInput("");
+    setSearchResult([]);
     input_ref.current.focus();
   };
 
@@ -46,6 +52,13 @@ function Input(props) {
     return () => window.removeEventListener("resize", handleResizeWindow);
   }, []);
 
+  useEffect(() => {
+    if (!debouncedValue.trim()) {
+        setSearchResult([]);
+        return;
+    }
+}, [debouncedValue]);
+
   return (
     <>
       <Tippy
@@ -61,11 +74,11 @@ function Input(props) {
         )}
         
       >
-        <div ref={wrapper_ref} className={cx("wrapper")}>
+        <div ref={wrapper_ref} className={cx("wrapper", "dark")}>
           <img
             className={cx("search")}
             onClick={handleSearchClick}
-            src={images["sm-search"]}
+            src={images["sm-search-dark"]}
             alt="search"
           />
 
